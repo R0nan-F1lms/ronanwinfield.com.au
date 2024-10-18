@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronan Films</title>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles.css">
+    <!-- Link to your local CSS file -->
+    <script src="/main.js" defer></script> <!-- Link to your local JS file -->
+    <script src="https://kit.fontawesome.com/2beb4de002.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Header Partial -->
+    <%- include('partials/header') %>
+
+    <section class="home__section">
+      <h1>Ronan Films</h1>
+    </section>
+
+    <div class="main__home__cards">
+      <div class="main__home">
+        <!-- Profile Card -->
+        <div class="card__profile">
+          <div class="profile">
+            <img src="/img/Ronan-Film-Logo-cartoon.png" width="200" height="200"
+              alt="Profile Image">
+          </div>
+          <div class="info">
+            <h2>About Me</h2>
+            <p>I am Ronan Films, a seasoned Front-End and Back-End Developer
+              with a Certificate IV in Information Technology, specialising in
+              C# Development, App Development, and Database Management. I hold a
+              Diploma in Information Technology Advanced Programming and am
+              currently pursuing a Bachelor’s degree in Cyber Security.</p>
+            <p>With over three years of experience in C# and JavaScript, and a
+              year each in XAML and Python, I bring a well-rounded skill set and
+              a deep understanding of both programming and security principles.
+              My expertise spans across designing intuitive user interfaces,
+              developing robust back-end solutions, and implementing secure
+              systems.</p>
+            <p>I excel in crafting elegant, high-performance code and am
+              dedicated to leveraging my technical skills to deliver innovative
+              solutions. My ongoing education in Cyber Security further
+              strengthens my capability to build secure applications and address
+              complex security challenges.</p>
+            <div class="social-media">
+              <a href="https://www.youtube.com/channel/UCjnAi_udv3Avudnh4nGKzQQ"
+                target="_blank"><i_y class="fa-brands fa-youtube"></i_y></a>
+              <a href="https://discord.gg/nr5Hrpq6H8" target="_blank"><i_d
+                  class="fa-brands fa-discord"></i_d></a>
+              <a href="https://twitter.com/ronan_films" target="_blank"><i_t
+                  class="fa-brands fa-twitter"></i_t></a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Pricing Cards -->
+        <h1>Prices</h1>
+        <!--Cards partial-->
+        <%- include('partials/cards') %>
+      </div>
+    </div>
+    <!--Footer Partial-->
+    <%- include('partials/footer') %>
+  </body>
+</html>

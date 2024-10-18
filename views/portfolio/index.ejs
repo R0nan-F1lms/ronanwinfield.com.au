@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+      content="Ronan Films, a friendly YouTuber, Front & Back End developer, bot creator, Cheif Marketing Officer of Pixelated Studios and a whole lot more!">
+    <meta name="author" content="Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:site_name" content="Portfolio | Ronan Films">
+    <meta property="og:image" content="/img/Ronan-Film-Logo-Icon.png">
+    <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/img/Ronan-Film-Logo-Icon.png">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+
+  <body>
+
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <%- include('../partials/header') %>
+
+      <script src="/main.js"></script>
+
+      <section class="home__section">
+        <img class="logo" src />
+        <h1>Portfolio</h1>
+      </section>
+      
+      <div id="portfolio-container">
+        <% portfolioItems.forEach(function(item) { %>
+          <div class="card__portfolio">
+            <div class="prices">
+              <img src="<%= item.image %>" alt="<%= item.title %>" width="200" height="200">
+            </div>
+            <div class="info__portfolio">
+              <h2><%= item.title %></h2>
+              <p><%= item.description %></p>
+              <p><strong>Category:</strong> <%= item.category %></p>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+      
+      <%- include('../partials/footer') %>
+
+  </body>
+
+</html>

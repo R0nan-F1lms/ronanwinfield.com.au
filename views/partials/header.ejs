@@ -1,0 +1,31 @@
+<!-- views/partials/header.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Add any necessary meta tags and stylesheets here -->
+        <link rel="stylesheet" href="styles.css">
+        <script defer src="theme-toggle.js"></script>
+        <!-- Link to the JS file containing the theme toggle script -->
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <a href="#" class="navbar__logo">Ronan Films</a>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/portfolio">Portfolio</a></li>
+                    <li><a href="/privacy" target="_blank">Privacy</a></li>
+                    <!-- Replace the button with the slider -->
+                    <label for="theme-toggle" class="slider-label">
+                    <input type="checkbox" id="theme-toggle"
+                        class="theme-toggle-slider">
+                        <span class="slider"></span>
+                    </label>
+                </ul>
+                <button class="navbar__toggler">
+                    <span></span>
+                </button>
+            </nav>
+        </header>
+    </body>
+</html>
