@@ -66,7 +66,7 @@ color: #000000;
 
 
 .home__section {
-background-image: url("/img/bg/Studio_Day.jpg"); /* Updated path */
+/*background-image: url("/img/bg/Studio_Day.jpg"); /* Updated path */
 background-position: center;
 background-size: cover;
 width: 100%;
@@ -91,8 +91,6 @@ text-align: center;
   font-size: 1.5rem;
   color: var(--text-color-light);
   align-items: center;
-  margin-top: -275px;
-  margin-left: 350px;
 }
 
 .text p {
@@ -114,7 +112,7 @@ text-align: center;
 
 /* Dark Theme */
 .dark-theme .home__section {
-  background-image: url("/img/bg/Studio_Night.jpg"); /* Dark theme image */
+  /*background-image: url("/img/bg/Studio_Night.jpg"); /* Dark theme image */
 }
 .dark-theme .text p {
   color: var(--text-color-dark);
@@ -134,6 +132,7 @@ text-align: center;
 .dark-theme .card__profile { 
   border: 1px solid var(--profile-outline-color-dark);
   box-shadow: 0 4px 8px 0 var(--profile-shadow-color-dark);
+  background-color: var(--bg-color-dark);
 }
 .dark-theme .card__price {
   border: 1px solid var(--profile-outline-color-dark);
@@ -148,6 +147,35 @@ text-align: center;
 .animations {
   padding: 10px;
 }
+
+.animated-text {
+  font-family: 'Courier New', Courier, monospace;
+  color: #fff; /* Set the text colour */
+  white-space: nowrap; /* Prevent the text from breaking into multiple lines */
+  border-right: 2px solid; /* This will act as the cursor */
+  display: inline-block;
+  overflow: hidden; /* Hide the text overflow to create the typing effect */
+  width: 0; /* Start with zero width and animate this */
+  animation: typing 2s steps(20, end), blink .5s step-end infinite alternate;
+}
+
+/* Typing effect */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Blinking cursor */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
 .main__home__cards {
   padding: 10px;
 }
@@ -159,6 +187,7 @@ text-align: center;
   justify-content: center;
   flex-wrap: wrap;
 }
+
 
 .Store {
   width: 100%;
@@ -178,12 +207,15 @@ text-align: center;
   padding: 20px;
   border: 1px solid rgba(255,255,255,0.3);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--bg-color-light);
   border-radius: 25px;
 }
 
 .card__profile img{
   display: block; /* Ensures the image is displayed as a block element */
   margin: 0 auto; /* Centres the image horizontally */
+  border-radius: 16px;
+  width: 304px;
 }
 
 .card__profile .info{
@@ -212,20 +244,20 @@ color: #000;
 
 .social-media i_y {
   margin: 3px;
-  font-size: 1rem;
+  font-size: 2rem;
   text-align:center;
   display: inline-block;
 color: #000000;
 }
-.social-media i_d {
+
+.dark-theme .social-media i_y {
   margin: 3px;
-  font-size: 1rem;
+  font-size: 2rem;
   text-align:center;
   display: inline-block;
-color: #7289da;
+color: #f0f0f0;
 }
-
-.social-media i__d {
+.social-media i_d {
   margin: 3px;
   font-size: 2rem;
   text-align:center;
@@ -235,7 +267,7 @@ color: #7289da;
 
 .social-media i_t {
   margin: 3px;
-  font-size: 1rem;
+  font-size: 2rem;
   text-align:center;
   display: inline-block;
 color: #1DA1F2;
