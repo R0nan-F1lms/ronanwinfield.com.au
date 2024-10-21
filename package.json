@@ -3,10 +3,12 @@
   "author": "Ronan Winfield",
   "publish": false,
   "dependencies": {
+    "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "lib": "latest",
-    "mongoose": "^8.5.2"
+    "mongoose": "^8.5.2",
+    "nodemailer": "^6.9.15"
   },
   "version": "1.0.0",
   "description": "ronanwinfield website",

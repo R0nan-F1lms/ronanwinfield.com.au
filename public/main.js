@@ -18,47 +18,28 @@ function navbarLinkClick() {
 }
 
 
-// setup typing animation.
-const textElement = document.querySelector('.animated-text');
-const words = ['Programmer', 'Designer', 'Animator', 'Cyber Specialist']; // Array of words
-let wordIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-let delay = 200;
+// cound down.
 
-function type() {
-  const currentWord = words[wordIndex];
+// Function to calculate and display years of experience
+function calculateExperience() {
+    const startYear = 2021;
+    const currentYear = new Date().getFullYear(); // Get the current year
+    const yearsOfExperience = currentYear - startYear; // Calculate experience
+    const yearsElement = document.getElementById("years");
   
-  if (isDeleting) {
-    // Reduce the number of characters for the deleting effect
-    charIndex--;
-    delay = 100;
-  } else {
-    // Increase the number of characters for the typing effect
-    charIndex++;
-    delay = 200;
-  }
-
-  // Display the text based on current character index
-  textElement.textContent = currentWord.slice(0, charIndex);
-
-  // If the word is completely typed out, pause before deleting
-  if (!isDeleting && charIndex === currentWord.length) {
-    isDeleting = true;
-    delay = 1000; // Wait 1 second before starting to delete
+    // Animate count up
+    let count = 0;
+    const interval = setInterval(() => {
+      if (count < yearsOfExperience) {
+        count++;
+        yearsElement.innerText = count; // Update the displayed count
+      } else {
+        clearInterval(interval); // Stop the interval when complete
+      }
+    }, 1000); // Adjust the speed as necessary (1000 ms = 1 second)
   }
   
-  // If the word is completely deleted, move to the next word
-  if (isDeleting && charIndex === 0) {
-    isDeleting = false;
-    wordIndex = (wordIndex + 1) % words.length; // Cycle through the words
-  }
+  // Call the function on page load
+  window.onload = calculateExperience;
+  
 
-  // Repeat the typing/deleting process
-  setTimeout(type, delay);
-}
-
-// Start the animation when the page loads
-document.addEventListener('DOMContentLoaded', () => {
-  type();
-});
